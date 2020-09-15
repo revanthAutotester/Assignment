@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "b1faabdd-84ee-43bb-8966-2b4ae00acb21",
+		"name": "PostCode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Current Weather data based on Postcode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6479825f-d383-4fcb-bf8d-5ae4f985de45",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/current?postal_code={{Postcode}}&country=&marine=&units=&lang=&callback=&key={{APIKey}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"current"
+					],
+					"query": [
+						{
+							"key": "postal_code",
+							"value": "{{Postcode}}"
+						},
+						{
+							"key": "country",
+							"value": "",
+							"description": "Country Code (2 letter)."
+						},
+						{
+							"key": "marine",
+							"value": "",
+							"description": "Marine stations only (buoys, oil platforms, etc)"
+						},
+						{
+							"key": "units",
+							"value": "",
+							"description": "Convert to units. Default Metric See <a href='/api/requests'>units field description</a>"
+						},
+						{
+							"key": "lang",
+							"value": "",
+							"description": "Language (Default: English) See <a href='/api/requests'>language field description</a>"
+						},
+						{
+							"key": "callback",
+							"value": "",
+							"description": "Wraps return in jsonp callback. Example: callback=func"
+						},
+						{
+							"key": "key",
+							"value": "{{APIKey}}",
+							"description": "Your registered API key."
+						}
+					]
+				},
+				"description": "Returns current weather observation - Given a Postal Code. "
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fe1b99dd-7430-4749-bdfe-05d2bd2f1132",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "21387401-36f1-47e8-a8ae-7296a318dea4",
+				"type": "text/javascript",
+				"exec": [
+					"var jsonData = JSON.parse(responseBody);",
+					"var jsonNamesData = jsonData.data;",
+					"console.log(\"data value is \"+data.Postcode);",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "96c945d6-2b2a-48d1-b323-11478d4ed366",
+			"key": "baseUrl",
+			"value": "http://api.weatherbit.io/v2.0/"
+		},
+		{
+			"id": "869745bc-eb9b-4a85-a8b9-4dddde9b72f1",
+			"key": "APIKey",
+			"value": "4496ec4c49aa48309dead93792707d38"
+		},
+		{
+			"id": "04e10ec1-af69-409e-a970-ce1e719a2d27",
+			"key": "PostCode",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}

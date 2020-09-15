@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "8e6f402e-f838-48ce-bfdc-3e4b468e1bd9",
+		"name": "Poncho_Get_Weather_Data_Latitude_Longitude",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get the Current Weather with Lat & Long",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e57fdc95-e143-40a1-a9a4-469ea4b69559",
+						"exec": [
+							"\r",
+							"  \r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/current?lat={{Latitude}}&lon={{Longitude}}&marine=&units=&lang=&callback=&key=4496ec4c49aa48309dead93792707d38",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"current"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "{{Latitude}}",
+							"description": "Latitude component of location."
+						},
+						{
+							"key": "lon",
+							"value": "{{Longitude}}",
+							"description": "Longitude component of location"
+						},
+						{
+							"key": "marine",
+							"value": "",
+							"description": "Marine stations only (buoys, oil platforms, etc)"
+						},
+						{
+							"key": "units",
+							"value": "",
+							"description": "Convert to units. Default Metric See <a href='/api/requests'>units field description</a>"
+						},
+						{
+							"key": "lang",
+							"value": "",
+							"description": "Language (Default: English) See <a href='/api/requests'>language field description</a>"
+						},
+						{
+							"key": "callback",
+							"value": "",
+							"description": "Wraps return in jsonp callback. Example: callback=func"
+						},
+						{
+							"key": "key",
+							"value": "4496ec4c49aa48309dead93792707d38",
+							"description": "Your registered API key."
+						}
+					]
+				},
+				"description": "Captures the current weather information based on the correct Latitude and Longitude information provided"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7b58a926-25db-4b3e-bc16-6e7952db398f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "23b22f4e-bd64-407f-9eb3-1a585a6f3a95",
+				"type": "text/javascript",
+				"exec": [
+					"var jsonData = JSON.parse(responseBody);",
+					"var jsonNamesData = jsonData.data;",
+					"console.log(\"Longitude value is \"+jsonNamesData[0].lon);",
+					"console.log(\"Latitude value is \"+jsonNamesData[0].lat);",
+					"console.log(\"latitude data value is \"+data.Latitude);",
+					"console.log(\"Longitude value data value is \"+data.Longitude);",
+					"tests['Longitude matches datavalue'] = data.Longitude == jsonNamesData[0].lon;",
+					"tests['Latitude matches datavalue'] = data.Latitude == jsonNamesData[0].lat;"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "f8df9c76-953f-4e27-8ba8-18b090047a3f",
+			"key": "baseUrl",
+			"value": "http://api.weatherbit.io/v2.0/"
+		},
+		{
+			"id": "2c357a4c-ec93-4f5d-aa3b-ce1ac2084f01",
+			"key": "APIKey",
+			"value": "4496ec4c49aa48309dead93792707d38"
+		},
+		{
+			"id": "5e1dc8ed-7837-4a3e-a9e1-68236a683911",
+			"key": "Latitude",
+			"value": ""
+		},
+		{
+			"id": "487d45db-e7fd-4f3b-815f-7bc590ddbb65",
+			"key": "Longitude",
+			"value": ""
+		},
+		{
+			"id": "1924815a-91a2-4e57-a29f-50ba570fe00d",
+			"key": "Postcode",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}
