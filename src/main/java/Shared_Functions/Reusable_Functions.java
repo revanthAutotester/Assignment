@@ -39,7 +39,7 @@ public class Reusable_Functions {
 	public static ExtentTest Test; 
 	public static String Datapath=System.getProperty("user.dir");
 	public static WebDriver driver;
-	public static String ResultFolderpath,RemoteNodeURL,RemoteBrowserPath,ResultFilepath,URL,Browser,Username,Password,Prod_desc,Prod_price,Execution,RemoteBrowser;
+	public static String ResultFolderpath,RemoteNodeURL,RemoteBrowserPath,ResultFilepath,URL,Browser,FirstName,LastName,Prod_desc,Prod_price,Execution,RemoteBrowser;
 	static Platform RemotePlatform;
 	
 	public static String GetDate(String Format)
@@ -189,14 +189,12 @@ public class Reusable_Functions {
 		
 	}
 	 
-	 public static void LauncApp() throws MalformedURLException
+	 public static void LaunchApp() throws MalformedURLException
 	 {
 		 Execution=GetFileValue("Execution");
-		 URL=GetFileValue("URL");
-		 Username=GetFileValue("Username");
-		 Password=GetFileValue("Password");
+		 URL=GetFileValue("URL");		 
 		 Browser=GetFileValue("Browser");
-		 if(Execution=="Local")
+		 if(Execution.equalsIgnoreCase("Local"))
 		 {
 			 getbrowser(Browser);		
 		     driver.navigate().to(URL);	        
