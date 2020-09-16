@@ -61,7 +61,7 @@ public class Car_Quote extends Reusable_Functions{
 		    }catch(Exception e) {    	
 		    	System.out.print("Error Occured:"+e.getMessage());
 		    	Reusable_Functions.getScreenshot(ResultFolderpath+"\\Quote_Error.png");
-				Test.log(LogStatus.FAIL,"Error on Amazon Page"+e.getMessage()+""+Test.addScreenCapture(ResultFolderpath+"\\Quote_Error.png"));
+				Test.log(LogStatus.FAIL,"Error on Create Quote Page"+e.getMessage()+""+Test.addScreenCapture(ResultFolderpath+"\\Quote_Error.png"));
 		    }
 		    
 
@@ -70,10 +70,10 @@ public class Car_Quote extends Reusable_Functions{
 	   @AfterTest
 	   public void Teardown() throws Exception
 	   {
-//		   extent.endTest(Test);
-//		   extent.flush();
-//		   if(driver!=null)
-//			   driver.quit();
+		   extent.endTest(Test);
+		   extent.flush();
+		   if(driver!=null)
+			   driver.quit();
 	   }
 
 	}
