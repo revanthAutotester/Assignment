@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49016" started-at="2020-09-16T22:58:09 AEST" finished-at="2020-09-16T22:58:58 AEST">
+  <suite name="Default suite" duration-ms="41575" started-at="2020-09-17T00:37:52 AEST" finished-at="2020-09-17T00:38:33 AEST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="49016" started-at="2020-09-16T22:58:09 AEST" finished-at="2020-09-16T22:58:58 AEST">
+    <test name="Default test" duration-ms="41575" started-at="2020-09-17T00:37:52 AEST" finished-at="2020-09-17T00:38:33 AEST">
       <class name="Quote.Car_Quote">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Quote.Car_Quote@1d371b2d]" name="setup" is-config="true" duration-ms="15597" started-at="2020-09-16T22:58:09 AEST" finished-at="2020-09-16T22:58:24 AEST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Quote.Car_Quote@1d371b2d]" name="setup" is-config="true" duration-ms="12775" started-at="2020-09-17T00:37:52 AEST" finished-at="2020-09-17T00:38:05 AEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Poncho_CarQuote()[pri:0, instance:Quote.Car_Quote@1d371b2d]" name="Poncho_CarQuote" duration-ms="33380" started-at="2020-09-16T22:58:25 AEST" finished-at="2020-09-16T22:58:58 AEST">
+        <test-method status="PASS" signature="Poncho_CarQuote()[pri:0, instance:Quote.Car_Quote@1d371b2d]" name="Poncho_CarQuote" duration-ms="27635" started-at="2020-09-17T00:38:05 AEST" finished-at="2020-09-17T00:38:32 AEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Poncho_CarQuote -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:Quote.Car_Quote@1d371b2d]" name="Teardown" is-config="true" duration-ms="1" started-at="2020-09-16T22:58:58 AEST" finished-at="2020-09-16T22:58:58 AEST">
+        <test-method status="PASS" signature="Teardown()[pri:0, instance:Quote.Car_Quote@1d371b2d]" name="Teardown" is-config="true" duration-ms="1122" started-at="2020-09-17T00:38:32 AEST" finished-at="2020-09-17T00:38:33 AEST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->

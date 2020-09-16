@@ -1,1 +1,13 @@
 /target/
+
+# Ignore Reports folder
+Reports
+
+# Ignore all jar files
+*.jar
+
+# Ignore all html files
+*.html
+
+# Ignore all png files
+*.png
