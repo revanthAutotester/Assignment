@@ -31,3 +31,4 @@
 <br>3) <b><ins>Page Objects</ins></b>: Contains all the identified object definitions for each object captured from Application Under Test(AUT). ( PageObjects->CreateAccountPage.java , RegisterPage.java)</br>
 <br>4) <b><ins>Configuration File</ins></b>: Contains all the application details like URL,Browser, details ( Configuration.properties file)</br>
 <br>5) <b><ins>Test Results</ins></b>: Html results files are generated once the test execution is completed ( library- ExtentReports)</br>
+ <b><ins>#Note</ins></b>: Please view "Test_Execution_video.avi" file attached into project for test execution
