@@ -79,6 +79,15 @@ public class Reusable_Functions {
 		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 
 	}
+	public static void Select_DropdownByindex(WebElement element,int value)
+	{
+		
+		Select drpCountry = new Select(element);
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		drpCountry.selectByIndex(value);
+		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+
+	}
 	public static void SendKeys(WebElement element,WebDriver driver,String value)
 	{
 		Webdriver_Wait(element);

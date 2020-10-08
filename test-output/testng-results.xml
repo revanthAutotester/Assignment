@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41575" started-at="2020-09-17T00:37:52 AEST" finished-at="2020-09-17T00:38:33 AEST">
+  <suite name="Default suite" duration-ms="17784" started-at="2020-10-09T01:50:32 AEDT" finished-at="2020-10-09T01:50:50 AEDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41575" started-at="2020-09-17T00:37:52 AEST" finished-at="2020-09-17T00:38:33 AEST">
-      <class name="Quote.Car_Quote">
-        <test-method status="PASS" signature="setup()[pri:0, instance:Quote.Car_Quote@1d371b2d]" name="setup" is-config="true" duration-ms="12775" started-at="2020-09-17T00:37:52 AEST" finished-at="2020-09-17T00:38:05 AEST">
+    <test name="Default test" duration-ms="17784" started-at="2020-10-09T01:50:32 AEDT" finished-at="2020-10-09T01:50:50 AEDT">
+      <class name="Register.Create_Account">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Register.Create_Account@1d371b2d]" name="setup" is-config="true" duration-ms="9926" started-at="2020-10-09T01:50:32 AEDT" finished-at="2020-10-09T01:50:42 AEDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Poncho_CarQuote()[pri:0, instance:Quote.Car_Quote@1d371b2d]" name="Poncho_CarQuote" duration-ms="27635" started-at="2020-09-17T00:38:05 AEST" finished-at="2020-09-17T00:38:32 AEST">
+        <test-method status="PASS" signature="Create_Account()[pri:0, instance:Register.Create_Account@1d371b2d]" name="Create_Account" duration-ms="6870" started-at="2020-10-09T01:50:42 AEDT" finished-at="2020-10-09T01:50:49 AEDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Poncho_CarQuote -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:Quote.Car_Quote@1d371b2d]" name="Teardown" is-config="true" duration-ms="1122" started-at="2020-09-17T00:38:32 AEST" finished-at="2020-09-17T00:38:33 AEST">
+        </test-method> <!-- Create_Account -->
+        <test-method status="PASS" signature="Teardown()[pri:0, instance:Register.Create_Account@1d371b2d]" name="Teardown" is-config="true" duration-ms="953" started-at="2020-10-09T01:50:49 AEDT" finished-at="2020-10-09T01:50:50 AEDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->
-      </class> <!-- Quote.Car_Quote -->
+      </class> <!-- Register.Create_Account -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

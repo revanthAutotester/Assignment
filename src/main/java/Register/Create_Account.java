@@ -1,4 +1,4 @@
-package Quote;
+package Register;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,46 +22,46 @@ import PageObjects.*;
 import Shared_Functions.Reusable_Functions;
 //
 
-public class Car_Quote extends Reusable_Functions{   
+public class Create_Account extends Reusable_Functions{   
 
 	
-	QuotePage quotepage=new QuotePage(driver);	   
-	PolicyPage PP=new PolicyPage(driver);
+	CreateAccountPage quotepage=new CreateAccountPage(driver);	   
+	RegisterPage PP=new RegisterPage(driver);
 
 	   @BeforeTest
 	    public void setup() throws IOException
 	   {
 		   
 			System.out.print("Creating HTML Results File");
-			ResultFilepath=CreateHTMLFile("PonchoAutomationResults");
+			ResultFilepath=CreateHTMLFile("CBAAutomationResults");
 			System.out.print("ResultFilepath is :"+ResultFilepath);			
 			//Create the browser instance and Launches the Application
 			LaunchApp();
        }
 		
 	   @Test  
-	    public void Poncho_CarQuote() throws IOException
+	    public void Create_Account() throws IOException
 	   {
 
 	        //Create Login Page object
-			Test=extent.startTest("PolicyHolderPage");		
-			quotepage = new QuotePage(driver);
-			PP=new PolicyPage(driver);
+			Test=extent.startTest("RegisterCommBiz");		
+			quotepage = new CreateAccountPage(driver);
+			PP=new RegisterPage(driver);
 		    try {
-		    	Test.log(LogStatus.PASS,"PolicyDetails Started");
-		    	PP.PersonDetails();	    
+		    	Test.log(LogStatus.PASS,"RegisterCommBiz Started");
+		    	PP.Register_Account();	    
 			    extent.endTest(Test);
 				extent.flush();	
 				
-				Test=extent.startTest("Car_Details");
-				quotepage.Enter_Car_Details();
+				Test=extent.startTest("Enter_Account_Details");
+				quotepage.Enter_Account_Details();;
 				extent.endTest(Test);
 				extent.flush();				
 			   
 		    }catch(Exception e) {    	
 		    	System.out.print("Error Occured:"+e.getMessage());
-		    	Reusable_Functions.getScreenshot(ResultFolderpath+"\\Quote_Error.png");
-				Test.log(LogStatus.FAIL,"Error on Create Quote Page"+e.getMessage()+""+Test.addScreenCapture(ResultFolderpath+"\\Quote_Error.png"));
+		    	Reusable_Functions.getScreenshot(ResultFolderpath+"\\REgister_Error.png");
+				Test.log(LogStatus.FAIL,"Error on Create Register Page"+e.getMessage()+""+Test.addScreenCapture(ResultFolderpath+"\\Account_Error.png"));
 		    }
 		    
 
@@ -70,7 +70,7 @@ public class Car_Quote extends Reusable_Functions{
 	   @AfterTest
 	   public void Teardown() throws Exception
 	   {
-		   extent.endTest(Test);
+	   extent.endTest(Test);
 		   extent.flush();
 		   if(driver!=null)
 			   driver.quit();
